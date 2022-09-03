@@ -10,7 +10,7 @@ int qempty(int front,int rear){
 }
 void qadd(int item,int q[],int front,int *rear){
     if(front==*rear && empty==0)
-        print("Queue Full\n");
+        printf("Queue Full\n");
     else{
         *rear==(*rear+1)%N;
         q[*rear]=item;
@@ -35,7 +35,7 @@ int qfront(int q[],int front,int rear){
 void display(int q[],int front,int rear){
     int i;
     printf("\n\n");
-    printf("\t\t\t Q U E U E \n);
+    printf("\t\t\t Q U E U E \n");
     printf("\t\t\t---------\n\n");
 
     printf("\t\t Front  ");
@@ -48,6 +48,17 @@ void display(int q[],int front,int rear){
     for(i=0;i<N;i++)
         printf("----");
     printf("\t %d",rear);
+
     printf("\n\t\t\t ");
-    for()
+    for(i=0;i<N;i++){
+        for(i=0;i<N;i++)
+            if(q[i]!=0)
+                printf("%d ",q[i]);
+            else
+                printf("  ");
+    }
+    printf("\n\t\t\t");
+    for(i=0;i<N;i++)
+        printf("----");
+
 }
