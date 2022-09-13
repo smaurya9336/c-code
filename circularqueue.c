@@ -62,3 +62,56 @@ void display(int q[],int front,int rear){
         printf("----");
 
 }
+void main(){
+    int q[N],front==rear;
+    int item,c;
+
+    do{
+        printf("\t\t  Menu \n");
+        printf("\t 1. Create Circular Queue\n");
+        printf("\t 2. Isempty Queue\n");
+        printf("\t 3. Top of Queue\n");
+        printf("\t 4. insert item in Queue\n");
+        printf("\t 5. delete item from queue\n");
+        printf("\t 6. Q U I T\n\n\n");
+
+
+        printf("\t Enter your choice:");
+        scanf("%d %d",&front,&rear);
+        switch(c){
+            case 1: //create
+                    front=-1;
+                    printf("Queue Created.");
+                    break;
+            case 2://Is empty
+                    if(isempty(front==(front+1)%N))
+                        printf("Queue is Empty.");
+                    else
+                        printf("Stack is not Empty.");
+                    break;
+            case 3://Top
+                    item=peep(front,rear);
+                    if(item!=0)
+                        printf("Top item of stack is: %d",item);
+                    break;
+            case 4://push
+                    printf("Enter element you want to add :");
+                    scanf("%d",&item);
+                    insert(item,q,N,&front);
+                    break;
+            case 5://POP
+                    delete(&item,q,&front);
+                    if(item!=0)
+                        printf("%d deleted",item);
+                    break;
+            case 6://Quit
+                    printf("G O O D B Y E\n");
+                    break;
+            default:printf("Wrong Choice....");
+                    getch();
+                    break;
+        }
+        display(front,rear);
+    }
+    while(c!=6);
+}
