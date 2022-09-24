@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <alloc.h>
+//#include <alloc.h>
 #include <conio.h>
 void main()
 {	int lb1,ub1,lb2,ub2;
@@ -75,5 +75,5 @@ void main()
 	printf("\nIn Roj Major at pos %d =%d ",rm_pos+1,*(a+rm_pos));
 	printf("\nIn Column Major at pos %d =%d ",cm_pos+1,*(c+cm_pos));
 
-	getch();
+	
 }
