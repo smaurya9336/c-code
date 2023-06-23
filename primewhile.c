@@ -2,7 +2,8 @@
 #include<stdio.h>
 #include<conio.h>
 void main(){
-    int i,j,Rng,count=0;
+    int i,j,Rng,count=0,k=0,l=0;
+    int arrp[100],arrc[100];
     printf("Enter your Rang:--");
     scanf("%d",&Rng);
     printf("Prime Number is\n");
@@ -18,10 +19,24 @@ void main(){
             } 
             j++;
         }
-           if(count==0){
-             printf("  %d",i);
-        }
-        
-
+          if(count==0)
+   	       arrp[k++]=i;
+         else
+   	     arrc[l++]=i;
+      }
+  	 printf("Prime:\n");
+     i=0;
+   	while(i<k){
+   	    printf("%d ",arrp[i]);
+        i++;
+    
     }
+    printf("\nComposite:\n");
+         i=0;
+          while(i<l){
+           printf("%d ",arrc[i]);
+           i++;
+
+    
+}
 }
